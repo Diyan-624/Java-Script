@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Welcome To My page</h1>
+    <button type="submit" id="btn">Click Me</button>
+
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <p id="two">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, ducimus!</p>
+
+
+<script>
+  //Changing text using getElementsById
+
+     let name = document.getElementById("para");
+     name.innerHTML = "This my new text";
+
+     //Select Element And Change Style
+
+     const btnn = document.getElementById("btn");
+
+     btnn.style.backgroundColor = "Blue";
+     btnn.style.border = "5px solid violet";
+     btnn.style.borderRadius = "20px";
+
+   
+    
+    //Change para
+     
+    let change =document.getElementById("two")
+
+    change.innerHTML="This is my changed New paragraph"
+
+    // Change Font Size and color
+
+    let colour =document.getElementById("header")
+    colour.style.color="crimson"
+    colour.style.fontSize="4rem"
+
+
+</script>
+</body>
+</html>
