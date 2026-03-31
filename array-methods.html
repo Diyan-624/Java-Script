@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Basics & Looping</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+
+        let fruits = ["Apple", "Banana"];
+
+        console.log("Initial Array:", fruits);
+         
+        // pop()
+        fruits.push("Mango");
+        console.log("After push:", fruits);
+
+        // pop()
+        fruits.pop();
+        console.log("After pop:", fruits);
+
+        // unshift() 
+        fruits.unshift("Orange");
+        console.log("After unshift:", fruits);
+
+        // shift() 
+        fruits.shift();
+        console.log("After shift:", fruits);
+
+
+
+        let numbers = [10, 20, 30, 40];
+
+        console.log("Using for loop:");
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+
+        console.log("Using forEach:");
+        numbers.forEach(function(num, index) {
+            console.log("Index:", index, "Value:", num);
+        });
+
+
+
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        console.log("Sum of numbers:", sum);
+
+    
+
+</script>
+
+</body>
+</html>
