@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods & Iterations</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+    let numbers = [5, 10, 15, 20, 3, 8];
+
+    console.log("Original Array:", numbers);
+
+    
+    let doubled = numbers.map(num => num * 2);
+    console.log("Doubled Array (map):", doubled);
+
+  
+    let evens = numbers.filter(num => num % 2 === 0);
+    console.log("Even Numbers (filter):", evens);
+
+  
+    let sum = numbers.reduce((total, num) => total + num, 0);
+    console.log("Sum (reduce):", sum);
+
+   
+    let firstGreater = numbers.find(num => num > 10);
+    console.log("First number > 10:", firstGreater);
+
+
+    let checkValue = 8;
+    let exists = numbers.includes(checkValue);
+    console.log("Array includes " + checkValue + ":", exists);
+
+
+
+</script>
+
+</body>
+</html>
