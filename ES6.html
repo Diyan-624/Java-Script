@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features Demo</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+
+   
+
+    //  Rewrite with let and const
+    const name = "Diyan";
+    let age = 20;
+
+    //  Template literals
+    console.log(`My name is ${name} and I am ${age} years old`);
+
+    //  Function with default parameters
+    function greet(user = "Guest") {
+        console.log(`Hello, ${user}`);
+    }
+    greet();       
+    greet("Alex");  
+
+
+
+    //  Destructor atray
+    const numbers = [10, 20, 30];
+    const [a, b, c] = numbers;
+    console.log("Array destructor:", a, b, c);
+
+    // Destructuring object
+
+    const person = { pname: "John", city: "Chennai" };
+    const { pname, city } = person;
+    console.log("Object destructuring:", pname, city);
+
+    //  Spread operator 
+
+    const original = [1, 2, 3];
+    const copy = [...original];
+    console.log("Copied array:", copy);
+
+    // Rest operator
+
+    function sumAll(...nums) {
+        return nums.reduce((total, num) => total + num, 0);
+    }
+    console.log("Sum using rest:", sumAll(1, 2, 3, 4));
+
+
+   
+
+    // Arrow function
+
+    const add = (x, y) => x + y;
+    console.log("Arrow function add:", add(5, 3));
+
+    const square = n => n * n;
+    console.log("Square:", square(4));
+
+    // Simple class with constructor and method
+
+     class Student {
+           constructor(name, marks) {
+            this.name = name;
+            this.marks = marks;
+        }
+
+        getDetails() {
+            return `${this.name} scored ${this.marks} marks`;
+        }
+    }
+
+    const s1 = new Student("Diyan", 85);
+    console.log(s1.getDetails());
+
+
+
+</script>
+
+</body>
+</html>
