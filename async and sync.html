@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Sync vs Async Demo</title>
+</head>
+<body>
+
+    <h2>Open Console (F12) to see output</h2>
+
+    <button id="startBtn">Start Demo</button>
+
+    <script>
+    
+
+        function runDemo() {
+            console.log("Start");
+
+            // Synchronous code 
+            console.log("Task 1 (Synchronous)");
+            console.log("Task 2 (Synchronous)");
+
+            // Asynchronous code 
+            setTimeout(() => {
+                console.log("Task 3 (Async after 2 seconds)");
+            }, 2000);
+
+            console.log("End");
+        }
+
+    
+
+        function printAfter2Sec() {
+            setTimeout(() => {
+                console.log("Hello after 2 seconds");
+            }, 2000);
+        }
+
+       
+
+        function startCounter() {
+            let count = 1;
+
+            let interval = setInterval(() => {
+                console.log("Counter:", count);
+                count++;
+
+                // Stop counter at 5
+                if (count > 5) {
+                    clearInterval(interval);
+                    console.log("Counter stopped");
+                }
+            }, 1000);
+        }
+
+
+
+        document.getElementById("startBtn").addEventListener("click", () => {
+            console.clear(); // clear old console logs
+
+            runDemo();          // sync + async example
+            printAfter2Sec();   // message after 2 sec
+            startCounter();     // counter every 1 sec
+        });
+
+    </script>
+
+</body>
+</html>
