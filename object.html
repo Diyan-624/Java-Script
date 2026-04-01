@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Example</title>
+</head>
+<body>
+
+  <h2>JavaScript Object </h2>
+  <p id="output"></p>
+
+  <script>
+    
+    const person = {
+      name: "Diyan",
+      age: 21,
+
+      sayHello() {
+        return "Hello, my name is " + this.name;
+      }
+    };
+
+
+    let result = "Name: " + person.name + "<br>";
+    result += "Age: " + person.age + "<br>";
+    person.name = "John";
+    person.age = 22;
+    result += "<br>After Modification:<br>";
+    result += "Name: " + person.name + "<br>";
+    result += "Age: " + person.age + "<br>";
+
+   
+    result += "<br>" + person.sayHello();
+
+    
+    document.getElementById("output").innerHTML = result;
+  </script>
+
+</body>
+</html>
