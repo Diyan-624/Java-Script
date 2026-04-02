@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback & Promise Example</title>
+</head>
+<body>
+
+  <h2>Check Console Output</h2>
+
+  <script>
+    
+    function call(name, callback) {
+      console.log("Hello " + name);
+      callback();
+    }
+
+    function calling() {
+      console.log("This is callback function executed!");
+    }
+       call("Diyan", calling);
+
+    const myPromise = new Promise((resolve, reject) => {
+      let success = true; 
+
+      if (success) {
+        resolve("Promise resolved successfully!");
+      } else {
+        reject("Promise rejected!");
+      }
+    });
+
+    myPromise
+      .then((message) => {
+        console.log(message);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  </script>
+
+</body>
+</html>
